@@ -1,73 +1,57 @@
-# React + TypeScript + Vite
+# Token Swap Form (Vite + React + Radix + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This document provides a **technical overview** of the Token Swap orm built with **Vite, React, Radix UI, Typescript**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- **Vite** → lightning-fast development build tool.
+- **React** → component-driven UI, hooks for state management.
+- **Radix UI** → accessible UI primitives, themes.
+- **Typescript** → strictly typed and enhanced developer experience
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Core Features
 
-## Expanding the ESLint configuration
+### 1. Token selection (From / To)
+- Built using **Radix Select** component.
+- Disabled tokens if it is used.
+- User-friendly dropdowns with clean UI.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 2. Swap input fields
+- **From Amount** → user inputs.
+- **To Amount** → automatically calculated.
+- **Bi-directional logic**: if user changes “From”, “To” updates.
+- Validation:
+  - Must be a positive number.
+  - Prevents swapping the same token.
+  - Error handling.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 3. Exchange
+- Calculation using price feed.
+- Updates instantly when user changes tokens or amounts.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 4. Swap button
+- **Swap button (⇅)** flips “From” and “To” tokens with animation.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 5. Error Handling & UX
+- Inline errors (`red text`).
+- Loading states when calculating output value.
+- Responsive design for mobile/desktop.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## User Flow
+1. User selects **From token** and **To token**.
+2. Enters an amount.
+3. Conversion is shown instantly.
+4. User presses **Swap icon button**.
+6. Transaction logic would automatically execute.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## Key Takeaways
+- Demonstrates **frontend engineering** with modern tools.
+- **interactivity** with **responsive design** with Radix.
+---
+
