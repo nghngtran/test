@@ -1,0 +1,56 @@
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0f0f23;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Token Swap Color System */
+  --ts-background-primary: #29294dcd;
+  --ts-background-secondary: #fffffff;
+  --ts-background-tertiary: #2a2a2a;
+  --ts-background-quaternary: #2a2a4e;
+  --ts-background-quinary: #373737e6;
+
+  --ts-border-primary: #3f4a5c;
+  --ts-border-secondary: #5025b66f;
+  --ts-border-accent: #8b5cf6;
+
+  --ts-text-primary: #ffffff;
+  --ts-text-secondary: #9ca3af;
+  --ts-text-tertiary: #7a808dba;
+  --ts-text-quaternary: #9ca3af;
+  --ts-text-error: #ef4444;
+
+  --ts-accent-primary: #8b5cf6;
+  --ts-accent-secondary: #6b46c1;
+  --ts-accent-hover: #7c3aed;
+
+  --ts-overlay-light: rgba(139, 92, 246, 0.1);
+  --ts-overlay-medium: rgba(139, 92, 246, 0.15);
+  --ts-overlay-focus: rgba(139, 92, 246, 0.2);
+  --ts-shadow-primary: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
