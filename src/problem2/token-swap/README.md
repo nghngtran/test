@@ -2,15 +2,12 @@
 
 This document provides a **technical overview** of the Token Swap orm built with **Vite, React, Radix UI, Typescript**.
 
----
 
 ## Tech Stack
 - **Vite** → lightning-fast development build tool.
 - **React** → component-driven UI, hooks for state management.
 - **Radix UI** → accessible UI primitives, themes.
 - **Typescript** → strictly typed and enhanced developer experience
-
----
 
 ## Core Features
 
@@ -48,10 +45,7 @@ This document provides a **technical overview** of the Token Swap orm built with
 4. User presses **Swap icon button**.
 6. Transaction logic would automatically execute.
 
----
-
 ## Key Takeaways
 - Demonstrates **frontend engineering** with modern tools.
 - **interactivity** with **responsive design** with Radix.
----
 
