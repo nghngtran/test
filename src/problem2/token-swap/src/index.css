@@ -54,3 +54,12 @@ body {
   width: 100%;
   min-height: 100vh;
 }
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(185deg, var(--ts-background-primary) 0%, var(--ts-background-secondary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}

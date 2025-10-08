@@ -1,7 +1,7 @@
-import "./App.css";
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
-import { Swap } from "./Swap";
+import { Swap } from "./pages/swap/Swap";
+import "./index.css";
 
 function App() {
   return (
@@ -11,7 +11,9 @@ function App() {
       grayColor="slate"
       radius="medium"
     >
-      <Swap />
+      <div className="app">
+        <Swap />
+      </div>
     </Theme>
   );
 }
